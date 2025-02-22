@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Texture groups" %>
+
+<h1>Texture groups</h1>
+
+<div id="texture_groups">
+  <% @texture_groups.each do |texture_group| %>
+    <%= render texture_group %>
+    <span class = 'aw'>
+      <%= link_to "Show this texture group", texture_group %>
+    </span>
+    <br>
+  <% end %>
+</div>
+
+<br><br><div class = 'aw'>
+  <%= link_to "New texture group", new_texture_group_path %>
+</div>

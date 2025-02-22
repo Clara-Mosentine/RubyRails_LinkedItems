@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @texture_group %>
+
+<div class = 'ti'>
+  <br>
+  <%= link_to "Edit this group's features", edit_texture_group_path(@texture_group) %> |
+  <%= link_to "Back to list of groups", texture_groups_path %>
+
+  <br><br>
+  <%= button_to "Destroy this group", @texture_group, method: :delete %>
+</div>

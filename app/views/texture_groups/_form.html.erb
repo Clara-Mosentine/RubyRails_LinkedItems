@@ -1,0 +1,32 @@
+<%= form_with(model: texture_group) do |form| %>
+  <% if texture_group.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(texture_group.errors.count, "error") %> prohibited this texture_group from being saved:</h2>
+
+      <ul>
+        <% texture_group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class = 'aw'>
+    <%= form.label :material, style: "display: block" %>
+    <%= form.text_field :material %>
+  </div>
+
+  <div class = 'aw'>
+    <%= form.label :refined, style: "display: block" %>
+    <%= form.checkbox :refined %>
+  </div>
+
+  <div class = 'aw'>
+    <%= form.label :smoothRepeat, style: "display: block" %>
+    <%= form.checkbox :smoothRepeat %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

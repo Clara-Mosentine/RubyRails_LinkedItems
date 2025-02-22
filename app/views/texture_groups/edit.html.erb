@@ -1,0 +1,12 @@
+<% content_for :title, "Editing texture group" %>
+
+<h1>Editing texture group</h1>
+
+<%= render "form", texture_group: @texture_group %>
+
+<br>
+
+<div class = 'ti'>
+  <%= link_to "Show this texture group", @texture_group %> |
+  <%= link_to "Back to texture groups", texture_groups_path %>
+</div>

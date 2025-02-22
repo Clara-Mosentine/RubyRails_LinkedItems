@@ -1,0 +1,37 @@
+<%= form_with(model: texture) do |form| %>
+  <% if texture.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(texture.errors.count, "error") %> prohibited this texture from being saved:</h2>
+
+      <ul>
+        <% texture.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class = 'aw'>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class = 'aw'>
+    <%= form.label :'URL', style: "display: block" %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class = 'aw'>
+    <%= form.label :'Horizontal Length in Pixels', style: "display: block" %>
+    <%= form.number_field :sizePixelsX %>
+  </div>
+
+  <div class = 'aw'>
+    <%= form.label :'Vertical Length in Pixels', style: "display: block" %>
+    <%= form.number_field :sizePixelsY %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

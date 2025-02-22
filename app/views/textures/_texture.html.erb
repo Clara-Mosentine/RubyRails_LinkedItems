@@ -1,0 +1,28 @@
+<div id="<%= dom_id texture %>">
+  <p>
+    <span class = 'ti'>
+      <strong>Texture Name:</strong>
+      <%= texture.name %>
+    </span>
+  </p>
+
+
+  <p>
+    <span class = 'aw'>
+      <strong>Image Size (Length x Height):</strong>
+      <%= texture.sizePixelsX %> x <%= texture.sizePixelsY %>
+      &nbsp;&nbsp; --- &nbsp;&nbsp;
+      <strong>
+        <a href=<%= texture.url %>  >Image URL</a>
+      </strong>
+    </span>
+  </p>
+
+
+  <img src= <%= texture.url %> width: min(800, <%= texture.sizePixelsX %>) alt="URL not found">
+
+  <p>
+    <%= button_to 'Add to Texture Group', line_items_path(texture_id: texture)%>
+  </p>
+  
+</div>

@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Textures" %>
+
+<h1>Textures</h1>
+
+<div class="aw">
+  <% @textures.each do |texture| %>
+    <%= render texture %>
+    <span class = "aw">
+      <%= link_to "Select this texture", texture %>
+    </span>
+    <br><br>
+  <% end %>
+</div>
+
+<br><br>
+<div class = "aw">
+  <%= link_to "Enter a new texture", new_texture_path %>
+</div>
+<br><br>

@@ -1,0 +1,12 @@
+<% content_for :title, "Editing texture" %>
+
+<h1>Editing texture</h1>
+
+<%= render "form", texture: @texture %>
+
+<br>
+
+<div class = 'aw'>
+  <%= link_to "Show this texture", @texture %> |
+  <%= link_to "Back to texture library", textures_path %>
+</div>
